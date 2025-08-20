@@ -9,10 +9,12 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python",       // Pythonの基本機能
-        "ms-toolsai.jupyter",     // Jupyter Notebookのサポート
-        "eamodio.gitlens",        // Gitの履歴を強力に可視化
-        "ms-python.black-formatter" // コードの自動整形
+        "ms-python.python",           // Pythonの基本機能
+        "ms-toolsai.jupyter",         // Jupyter Notebookのサポート
+        "eamodio.gitlens",            // Gitの履歴を強力に可視化
+        "ms-python.black-formatter",  // コードの自動整形
+        "GitHub.copilot",             // ★★★ Copilot本体（コード補完）を追加 ★★★
+        "GitHub.copilot-chat"         // ★★★ Copilotチャット（対話機能）を追加 ★★★
       ],
       "settings": {
         // Pythonインタープリターとして、自動作成した仮想環境をデフォルトに設定
