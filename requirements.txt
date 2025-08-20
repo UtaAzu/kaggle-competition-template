@@ -1,0 +1,19 @@
+# --- Core Libraries ---
+numpy
+pandas
+scikit-learn
+
+# --- Visualization ---
+matplotlib
+seaborn
+
+# --- GBDT Models ---
+lightgbm
+xgboost
+catboost
+
+# --- Utility ---
+joblib
+tqdm
+polars
+pyarrow
