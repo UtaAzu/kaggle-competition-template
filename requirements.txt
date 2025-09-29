@@ -12,8 +12,9 @@ lightgbm
 xgboost
 catboost
 
-# --- Utility ---
-joblib
-tqdm
-polars
-pyarrow
+# --- LLM Libraries ---
+torch
+transformers
+peft
+datasets
+accelerate

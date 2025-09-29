@@ -1,0 +1,82 @@
+name: EDA Task
+description: Exploratory Data Analysis task based on standard EDA pipeline
+title: "EDAタスク: [Task Description]"
+labels: ["eda", "analysis"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        EDA（探索的データ分析）タスクの作成フォームです。
+        .prompts/04_perform_standard_eda.md の7ステップパイプラインに基づいて実施してください。
+
+  - type: input
+    id: objective
+    attributes:
+      label: 目的・概要
+      description: このEDAで達成したい目的や分析の概要
+      placeholder: "例: EXP001Gの次アクションとして、データの基本特性と潜在的リスクを把握する"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: eda_checklist
+    attributes:
+      label: EDA実施チェックリスト
+      description: 標準EDAパイプラインの7ステップに基づく項目
+      options:
+        - label: ラベル分布確認（クラス不均衡、分布の偏り）
+          required: false
+        - label: テキスト長分布（文字数、単語数、統計量）
+          required: false
+        - label: 重複/類似サンプル検出（データ品質チェック）
+          required: false
+        - label: グループ性/リーク確認（GroupKFold必要性の判定）
+          required: false
+        - label: EDAノート保存（experiments/[EXPID]/notebooks/EDA_[EXPID].ipynb）
+          required: false
+        - label: Run Cardに所見3–5点を追記
+          required: false
+        - label: docs/scoreboard.md の該当行に所見要約とリンクを追記
+          required: false
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: 受入基準
+      description: このタスクが完了したとみなすための具体的な条件
+      placeholder: |
+        例:
+        - 上記チェックリストが全て完了していること
+        - Run Card/scoreboardが更新されていること
+        - EDAノートブックが指定パスに保存されていること
+      value: "上記チェックが全て完了し、Run Card/scoreboardが更新されていること"
+    validations:
+      required: true
+
+  - type: input
+    id: run_card_link
+    attributes:
+      label: Run Card リンク
+      description: 関連する実験のRun Cardへのパス
+      placeholder: "experiments/[EXPID]/README.md"
+
+  - type: input
+    id: prompt_reference
+    attributes:
+      label: プロンプト参照
+      description: EDAガイドラインのプロンプトファイル
+      value: ".prompts/04_perform_standard_eda.md"
+
+  - type: input
+    id: due_date
+    attributes:
+      label: 期限 (任意)
+      description: タスクの完了予定日
+      placeholder: "YYYY-MM-DD"
+
+  - type: input
+    id: assignee
+    attributes:
+      label: 担当者 (任意)  
+      description: このタスクの担当者
+      placeholder: "@username"

@@ -1,11 +1,10 @@
 {
-  "name": "Kaggle Competition Environment",
-  "image": "mcr.microsoft.com/devcontainers/python:3.10",
-
-  // --- Codespacesが起動した後に、自動で実行されるコマンド ---
-  "postCreateCommand": "python3 -m venv .venv && ./.venv/bin/python -m pip install -r requirements.txt",
-
-  // --- VS Codeのカスタマイズ設定 ---
+  "name": "Kaggle Competition Environment (built-image)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "python3 -m venv .venv && ./.venv/bin/python -m pip install --upgrade pip setuptools wheel && ./.venv/bin/python -m pip install -r requirements.txt",
+  "postStartCommand": "if [ -f .venv/bin/activate ]; then . .venv/bin/activate; python -m pip check || ./.venv/bin/python -m pip install --upgrade -r requirements.txt; else echo '.venv missing'; fi",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,9 +16,13 @@
         "GitHub.copilot-chat"
       ],
       "settings": {
-        // Pythonインタープリターとして、自動作成した仮想環境をデフォルトに設定
-        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python"
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
+        "terminal.integrated.shell.linux": "/bin/bash"
       }
     }
-  }
+  },
+  "forwardPorts": [8888, 6006],
+  "mounts": [
+    "source=python-pip-cache,target=/home/vscode/.cache/pip,type=volume"
+  ]
 }

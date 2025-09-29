@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Devil's Advocate レビューガイド
+    url: https://github.com/UtaAzu/Kaggle-Jigsaw2025/blob/main/docs/reviews/README.md
+    about: 実験の批判的レビューを行う際のガイドラインと索引

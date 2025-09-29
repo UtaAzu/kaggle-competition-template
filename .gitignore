@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Test files
+mock_test.csv
+test_submission.csv
+
+# Large ML artifacts (>50MB should not be committed)
+# Small experiment artifacts are okay for testing/sharing
+# But exclude very large model files, data files, etc.
+*.h5
+*.hdf5
+data/raw/
+data/external/
+models/large/
+*.parquet
+*.feather
+
+# artifacts models (keep out of git)
+artifacts/models/
+kaggle/working/artifacts/
