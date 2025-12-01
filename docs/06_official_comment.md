@@ -1,8 +1,8 @@
 Archived: Official Comments & Discussion (Generic)
 
-This document originally collected official competition comments and public forum posts for a past competition. It has been archived to `examples/archive/`.
+This document originally collected official competition comments and public forum posts for a past competition. Historical competition discussions and posts were removed from this repository to keep the template generic.
 
-For general guidance and community discussions, consult the `examples/archive/` directory or link to external forum archives.
+For general guidance and community discussions, consult external forum archives or add community links under `examples/` as needed.
 
 João Phillipe Cardenuto · Posted 13 days ago
 ·

@@ -1,11 +1,11 @@
 # Kaggle Competition Template
 
-This repository provides a starter template for organizing Kaggle-style competitions, notebooks, scripts, and experiment tracking. It is intentionally minimal and configurable -- use the `examples/archive/` folder for competition-specific examples.
+This repository provides a starter template for organizing Kaggle-style competitions, notebooks, scripts, and experiment tracking. It is intentionally minimal and configurable -- use the `examples/` folder for competition-specific examples.
 
 What's included:
 - `train.py` and `predict.py` examples for training/predicting models (config-driven)
 - `experiments/` skeleton for storing experiment artifacts, OOF/metrics, run.json
-- `docs/` templates and guides. Place competition-specific content under `examples/archive/<COMPETITION>/`
+- `docs/` templates and guides. Place competition-specific content under `examples/<COMPETITION>/`
 - `scripts/` helpers for common workflows: recording artifacts, CV/LB analysis, etc.
 - `src/` structured code and `src/metrics/` for metric helpers
 
@@ -18,4 +18,4 @@ Customization:
 - Replace evaluation code in `src/metrics/` with your competition's metric
 - Add dataset-specific pre-processing under `src/` as needed
 
-For competition-specific docs and archived examples, see the `examples/archive/` directory.
+For competition-specific docs and examples, see the `examples/` directory.

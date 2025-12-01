@@ -10,4 +10,4 @@ Please document the dataset layout for your competition/project. For example:
 
 Notes:
 - If you use Kaggle dataset uploads, set `KAGGLE_DATASET_SLUG` and adapt the scripts' CLI options / environment variables to point to the dataset.
-- This template intentionally does not prescribe a particular dataset layout; keep it minimal and add examples in `examples/archive/` for reference.
+-- This template intentionally does not prescribe a particular dataset layout; keep it minimal and add examples in `examples/` for reference.
