@@ -1,0 +1,23 @@
+# --- Core Libraries ---
+numpy
+pandas
+scikit-learn
+polars>=0.20
+
+# --- Visualization ---
+matplotlib
+seaborn
+
+# --- GBDT Models ---
+lightgbm
+xgboost
+catboost
+
+# --- LLM Libraries ---
+torch
+transformers
+peft
+datasets
+accelerate
+albumentations
+opencv-python-headless
